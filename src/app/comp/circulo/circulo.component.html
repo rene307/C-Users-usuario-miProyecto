@@ -1,0 +1,39 @@
+<!-- en whatsapp-->
+<ion-list>
+  <ion-item routerLink="/circulo">
+    <ion-label>Círculo</ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Círculo</ion-card-title>
+    <ion-card-subtitle>Perímetro</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <!-- Información sobre el cálculo -->
+    <p>El perímetro de un círculo es la longitud de la línea que forma su borde.</p>
+    <p><strong>Fórmula:</strong> \( P = 2 \cdot \pi \cdot r \)</p>
+
+    <!-- Entrada del radio -->
+    <ion-item>
+      <ion-label position="floating">Radio (cm)</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="radio"
+        placeholder="Ingrese el radio"
+      ></ion-input>
+    </ion-item>
+<br>
+    <!-- Botón para calcular -->
+    <ion-button expand="block" color="primary" (click)="calcular()">
+      Calcular el Perímetro
+    </ion-button>
+
+    <!-- Mostrar el resultado -->
+    <ion-item *ngIf="perimetro !== null">
+      <p><strong>El perímetro es:</strong> {{ perimetro | number:'1.2-2' }} cm</p>
+    </ion-item>
+  </ion-card-content>
+</ion-card>

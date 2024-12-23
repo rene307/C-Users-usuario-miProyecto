@@ -1,0 +1,62 @@
+<!--<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Seleccione la figura geométrica" (ionChange)="handleChange($event)">
+        <ion-select-option value="circulo">Círculo</ion-select-option>
+        <ion-select-option value="triangulo">Triángulo</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+<ion-content>
+  <ion-button color="secondary">Calcular</ion-button>
+  </ion-content>
+-->
+
+  <!-- Aca esta el problema parece-->
+  <!-- Renderiza el componente según la selección-->
+   <!--
+  <app-circulo *ngIf="componente === 'circulo'"></app-circulo>
+  <app-triangulo *ngIf="componente === 'triangulo'"></app-triangulo>
+</ion-content>
+-->
+<!--  probando esto 20:47-->
+  <!--
+<app-circulo *ngIf="figuraSeleccionada === 'circulo'"></app-circulo>
+<app-triangulo *ngIf="figuraSeleccionada === 'triangulo'"></app-triangulo>
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Seleccione Figura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Seleccione una figura</ion-label>
+    <!-- Enlace bidireccional con [(ngModel)] -->
+    <ion-select [(ngModel)]="figuraSeleccionada" (ionChange)="handleChange($event)">
+      <ion-select-option value="circulo">Círculo</ion-select-option>
+      <ion-select-option value="triangulo">Triángulo</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Renderizar componentes según selección -->
+  <div>
+    <app-circulo *ngIf="figuraSeleccionada === 'circulo'"></app-circulo>
+    <app-triangulo *ngIf="figuraSeleccionada === 'triangulo'"></app-triangulo>
+  </div>
+</ion-content>

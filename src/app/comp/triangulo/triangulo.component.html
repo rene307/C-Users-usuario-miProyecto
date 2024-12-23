@@ -1,0 +1,60 @@
+<!--<ion-item>
+  <ion-label position="floating">Lado A (cm)</ion-label>
+  <ion-input
+    type="number"
+    [(ngModel)]="ladoA"
+    placeholder="Ingrese el lado A"
+  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Lado B (cm)</ion-label>
+  <ion-input
+    type="number"
+    [(ngModel)]="ladoB"
+    placeholder="Ingrese el lado B"
+  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Lado C (cm)</ion-label>
+  <ion-input
+    type="number"
+    [(ngModel)]="ladoC"
+    placeholder="Ingrese el lado C"
+  ></ion-input>
+</ion-item>-->
+<ion-item>
+  <ion-label position="floating">Lado A (cm)</ion-label>
+  <ion-input
+    type="number"
+    [(ngModel)]="ladoA"
+    placeholder="Ingrese el lado A"
+  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Lado B (cm)</ion-label>
+  <ion-input
+    type="number"
+    [(ngModel)]="ladoB"
+    placeholder="Ingrese el lado B"
+  ></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Lado C (cm)</ion-label>
+  <ion-input
+    type="number"
+    [(ngModel)]="ladoC"
+    placeholder="Ingrese el lado C"
+  ></ion-input>
+</ion-item>
+
+<!-- Botón para calcular el perímetro -->
+<ion-button expand="block" color="primary" (click)="calcularPerimetro()">
+  Calcular el Perímetro
+</ion-button>
+
+<!-- Mostrar el resultado -->
+<ion-item *ngIf="perimetro !== null">
+  <p><strong>El perímetro es:</strong> {{ perimetro | number:'1.2-2' }} cm</p>
+</ion-item>
+
+
